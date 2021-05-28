@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Signature Generator": {
+      "commandName": "Project",
+      "commandLineArgs": "../../../Data/data.txt 2"
+    }
+  }
+}

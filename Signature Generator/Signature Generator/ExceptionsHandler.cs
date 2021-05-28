@@ -1,0 +1,18 @@
+﻿using System;
+
+namespace Signature_Generator
+{
+    class ExceptionsHandler
+    {
+        private static void Handler(object sender, UnhandledExceptionEventArgs e)
+        {
+            Exception exception = (Exception)e.ExceptionObject;
+            Console.WriteLine(exception.Message);
+            Console.WriteLine(exception.StackTrace);
+        }
+        public static void HandleAllExceptions()
+        {
+            AppDomain.CurrentDomain.UnhandledException += Handler;
+        }
+    }
+}
