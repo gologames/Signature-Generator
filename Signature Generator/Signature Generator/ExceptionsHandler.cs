@@ -7,8 +7,8 @@ namespace Signature_Generator
         private static void Handler(object sender, UnhandledExceptionEventArgs e)
         {
             Exception exception = (Exception)e.ExceptionObject;
-            Console.WriteLine(exception.Message);
-            Console.WriteLine(exception.StackTrace);
+            Console.Error.WriteLine(exception.Message);
+            Console.Error.WriteLine(exception.StackTrace);
         }
         public static void HandleAllExceptions()
         {
